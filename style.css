@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(45deg, #4c5c68b9 10%, #c5c3c6 80%);
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+}
+
+h1{
+    color: #1985a1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.display-container{
+    position: relative;
+    background-color: #46494c;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid #4c5c68;
+}
+
+.display{
+    color: #dcdcdd;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 30px;
+    padding: 0.5rem 2rem;
+    border: none;
+    pointer-events: none;
+}
+
+.display::placeholder{
+    color: #dcdcdda6;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.display-container button{
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 1.25rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.input-container{
+    background-color: #46494c;
+    border-radius: 1rem;
+    border-bottom: 4px solid #4c5c68;
+    padding: 2rem;
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length-container p:nth-child(1){
+    font-size: 1.5rem;
+    color: #f0ebd8
+}
+
+.length-container p:nth-child(2){
+    font-size: 1.5rem;
+    color: #f3c624
+}
+
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.strength-container p{
+    color: #f0ebd8;
+    font-size: 1.5rem;
+}
+
+.strength-container div{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+.generateButton {
+    width: 100%;
+    padding: 0.75rem 0;
+    text-align: center;
+    border-radius: 0.75rem;
+    /* border : 2px solid black; */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    background-color: whitesmoke;
+    cursor: pointer;
+  }
+
+  .check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap : 0 1rem;
+    color: #f0ebd8;
+  }
+
+  .check input{
+    position: relative;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #1985a1;
+    border-radius: 0.35rem;
+    cursor: pointer;
+  }
+
+  .check input:checked{
+    background-color: #1985a1;
+  }
+
+  .check input:checked::before{
+    content: '✔';
+    position: absolute;
+    top: -80%;
+    left:50%;
+    font-size:1.05rem;
+    font-weight: 600;
+    transform: translateX(-50%)  translateY(40%);
+  }
+
+  .check label{
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+
+  }
+
+  .slider{
+    appearance: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    height: 0.75rem;
+  }
+
+  .slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    background-color: #0fc7d1;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transition: all 100ms ease-in;
+}
+
+.slider:hover{
+    outline: 2px solid #353535;
+}
+
+.slider::-webkit-slider-thumb:hover{
+    background-color: #0d3b66;
+    border: 2px solid whitesmoke;
+    box-shadow: 0px 0px 15px 0px whitesmoke;
+}
+
+  .copiedText {
+    position: absolute;
+    background-color: #f0ebd8;
+    color: #1985a1;
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+  }
+  
+  .active {
+    opacity: 1;
+    transform: scale(1);
+  }
